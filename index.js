@@ -51,6 +51,38 @@ const questions = [{
     }
 ];
 
+function generateIntern(data) {
+    const employee = new Intern(data.employeeName, data.id, data.email, data.school);
+    console.log(employee);
+}
+
+function generateEngineer(data) {
+    const employee = new Engineer(data.employeeName, data.id, data.email, data.github);
+    console.log(employee);
+}
+
+function generateManager(data) {
+    const employee = new Manager(data.employeeName, data.id, data.email, data.officeNumber);
+    console.log(employee);
+}
+
+function decideEmployee(data) {
+    switch(data.employee) {
+        case "Manager": {
+            generateManager(data);
+            break;
+        }
+        case "Engineer": {
+            generateEngineer(data);
+            break;
+        }
+        case "Intern": {
+            generateIntern(data);
+            break;
+        }
+    }
+}
+
 function employeeAnswers() {
     inquire
         .prompt(questions)
@@ -58,8 +90,10 @@ function employeeAnswers() {
             console.log(response);
             if (!response.isFinished) {
                 // same function calls here to generate the employee with the current answers except no init() call
+                decideEmployee(response);
             } else {
                 // function calls to generate the employee before asking next set of questions for new employee
+                decideEmployee(response);
                 employeeAnswers();
             }
         }));
