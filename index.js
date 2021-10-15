@@ -1,6 +1,8 @@
 const fs = require('fs');
 const inquire = require('inquirer');
-
+const Engineer = require('./lib/engineer');
+const Manager = require('./lib/manager');
+const Intern = require('./lib/intern');
 
 const questions = [{
         type: "list",
@@ -40,16 +42,32 @@ const questions = [{
         message: "What is the school of the intern?",
         name: "school",
         when: (answer) => answer.employee === "Intern"
+    },
+    {
+        type: "confirm",
+        message: "Add a member or quit?",
+        // choices:["Add member", "Quit"],
+        name: "isFinished"
     }
 ];
 
+function employeeAnswers() {
+    inquire
+        .prompt(questions)
+        .then((response => {
+            console.log(response);
+            if (!response.isFinished) {
+                // same function calls here to generate the employee with the current answers except no init() call
+            } else {
+                // function calls to generate the employee before asking next set of questions for new employee
+                employeeAnswers();
+            }
+        }));
+}
+
 
 function init() {
-    inquire
-    .prompt(questions)
-    .then((response => {
-        console.log(response);
-    }));
+    employeeAnswers();
 }
 
 init();
