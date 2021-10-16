@@ -1,14 +1,5 @@
 .jumbotron {
-    background-color: rgb(255, 101, 101);
-    text-align: center;
-    color: white;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.box {
-    display: flex;
-    flex-wrap: wrap;
-}
+        background-color: rgb(255, 101, 101);
+        text-align: center;
+        color: white;
+    }
