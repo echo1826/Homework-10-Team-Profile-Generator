@@ -6,6 +6,7 @@ const Intern = require('./lib/intern');
 const renderHtml = require('./lib/htmlrender');
 const renderCss = require('./lib/cssrender');
 
+
 const teamMembers = [];
 
 const questions = [{
@@ -112,6 +113,7 @@ function employeeAnswers() {
             if (!response.isFinished) {
                 // same function calls here to generate the employee with the current answers except no init() call
                 decideEmployee(response);
+                writeCss(renderCss());
                 writeHtml(renderHtml(teamMembers));
             } else {
                 // function calls to generate the employee before asking next set of questions for new employee
