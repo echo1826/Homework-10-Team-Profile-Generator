@@ -40,9 +40,9 @@ const questions = [{
         name: "email",
         validate(value) {
             const pass = value.includes("@");
-            if(pass) {
+            if (pass) {
                 return true;
-            }else {
+            } else {
                 return "Please enter a valid email";
             }
         }
