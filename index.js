@@ -101,7 +101,7 @@ function writeHtml(html) {
     fs.writeFile('./dist/index.html', html, (err) => {
         err ? console.error(err) : console.log("HTML generated!")
     })
-    console.log(html);
+    // console.log(html);
 }
 
 function writeCss(css) {
@@ -142,7 +142,7 @@ function employeeAnswers() {
     inquire
         .prompt(questions)
         .then((response => {
-            console.log(response);
+            // console.log(response);
             if (response.isFinished === "Quit") {
                 // same function calls here to generate the employee with the current answers except no init() call
                 decideEmployee(response);
