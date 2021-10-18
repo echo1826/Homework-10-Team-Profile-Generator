@@ -5,9 +5,10 @@
 2. [Installation](#installation)<br>
 3. [Demo](#demo)<br>
 4. [License](#license)<br>
-5. [Contribute](#contributing)<br>
-6. [Built Using](#built-using)<br>
-7. [Questions](#questions) 
+5. [Tests](#tests)<br>
+6. [Contribute](#contributing)<br>
+7. [Built Using](#built-using)<br>
+8. [Questions](#questions) 
 
 
 # Description
@@ -29,12 +30,19 @@ npm i jest
 
 # Demo
 
-[Demo Video](https://watch.screencastify.com/v/CrkPpVoXhGwZiGcLo5B7)
+[Demo Video](https://watch.screencastify.com/v/7JcCuMRWHOzHY7qecrWF)
 
 # License
 
 This repo is covered under the MIT License.
 <br>[License](https://choosealicense.com/licenses/mit/)
+
+# Tests
+
+To run the tests, type in the command line: <br>
+```shell
+npm run test
+```
 
 # Contributing
 
