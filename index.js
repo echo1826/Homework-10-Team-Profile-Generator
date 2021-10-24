@@ -76,10 +76,6 @@ const questions = [{
     }
 ];
 
-// const managerQuestions = [
-//     we;kljso
-// ]
-
 // functions that generate new objects based on user answers
 function generateIntern(data) {
     const intern = new Intern(data.employeeName, data.id, data.email, data.school);
@@ -127,15 +123,6 @@ function decideEmployee(data) {
         }
     }
 }
-
-// inquire
-//     .prompt(managerQuestions)
-//     .then(response => {
-//         //function calls
-//         inquire.prompt(questions).then(data => {
-//             //function calls
-//         })
-//     })
 
 // asks user questions then calls function that decides what happens based on the data received
 function employeeAnswers() {

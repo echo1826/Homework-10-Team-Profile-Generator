@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/echo1826/Homework-10-Team-Profile-Generator#readme",
   "dependencies": {
+    "heroku": "^7.59.0",
     "inquirer": "^8.2.0",
     "jest": "^24.8.0"
   }
